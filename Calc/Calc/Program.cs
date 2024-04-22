@@ -17,7 +17,16 @@
                 case "+": res = a+b; break;
                 case "-": res = a-b; break;
                 case "*": res = a*b; break;
-                case "/": res = a/b; break;
+                case "/": 
+                    if (b == 0) 
+                    { 
+                        Console.WriteLine("Делить на ноль нельзя"); res = -99999999; 
+                    }
+                    else
+                    {
+                        res = a/b;
+                    }
+                    break;
 
             }
             Console.WriteLine("Ответ: {0}",res);
